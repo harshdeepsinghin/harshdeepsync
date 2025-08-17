@@ -15,23 +15,23 @@ export function Navbar() {
 
   return (
     <header className="fixed top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container h-14 flex items-center">
-        <div className="mr-4 flex">
-          <Link href="/" className="mr-6 flex items-center space-x-2">
+      <div className="container flex h-14 items-center">
+        <div className="mr-4 md:mr-6 flex items-center">
+          <Link href="/" className="flex items-center space-x-2">
             <span className="font-bold font-headline text-xl tracking-wider">
               Harshdeep.studio
             </span>
           </Link>
         </div>
         <div className="flex flex-1 items-center justify-end">
-          <nav className="flex items-center space-x-6 text-sm font-medium">
+          <nav className="flex items-center space-x-2 md:space-x-6 text-sm font-medium">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 className={cn(
-                  'transition-colors hover:text-foreground/80',
-                  pathname === link.href ? 'text-foreground' : 'text-foreground/60'
+                  'transition-colors hover:text-foreground/80 px-2 py-1 rounded-md',
+                  pathname === link.href ? 'text-foreground bg-accent' : 'text-foreground/60'
                 )}
               >
                 {link.label}

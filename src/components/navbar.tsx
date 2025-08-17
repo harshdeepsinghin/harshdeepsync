@@ -22,6 +22,8 @@ export function Navbar() {
               Harshdeep.studio
             </span>
           </Link>
+        </div>
+        <div className="flex flex-1 items-center justify-end">
           <nav className="flex items-center space-x-6 text-sm font-medium">
             {navLinks.map((link) => (
               <Link
@@ -36,9 +38,6 @@ export function Navbar() {
               </Link>
             ))}
           </nav>
-        </div>
-        <div className="flex flex-1 items-center justify-end">
-          {/* Future search bar can go here */}
         </div>
       </div>
     </header>

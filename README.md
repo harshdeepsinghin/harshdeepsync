@@ -1,5 +1,5 @@
-# Firebase Studio
+# Harshdeep.studio
 
-This is a NextJS starter in Firebase Studio.
+A personal portfolio website for Harshdeep, an artist.
 
-To get started, take a look at src/app/page.tsx.
+Built with Next.js and Firebase Studio.

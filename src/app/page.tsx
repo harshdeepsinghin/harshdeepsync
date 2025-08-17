@@ -13,7 +13,7 @@ export default function Home() {
   ];
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center p-8 text-center text-foreground bg-background">
+    <main className="flex min-h-[calc(100vh-3.5rem)] flex-col items-center justify-center p-8 text-center text-foreground bg-background">
       <div className="flex flex-col items-center justify-center space-y-8 max-w-4xl mx-auto">
         <div className="space-y-4">
           <h1 className="text-6xl md:text-8xl lg:text-9xl font-headline tracking-widest text-center uppercase animate-fade-in-down">

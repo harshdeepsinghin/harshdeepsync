@@ -1,7 +1,9 @@
 import type {NextConfig} from 'next';
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  // Enable static HTML export so the site can be deployed on GitHub Pages
+  output: 'export',
+  // Allow build even if type errors or lint errors (can tighten later)
   typescript: {
     ignoreBuildErrors: true,
   },
@@ -9,6 +11,8 @@ const nextConfig: NextConfig = {
     ignoreDuringBuilds: true,
   },
   images: {
+    // When using static export, Next/Image optimization must be disabled
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: 'https',

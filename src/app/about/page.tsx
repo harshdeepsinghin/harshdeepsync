@@ -19,13 +19,13 @@ export default function AboutPage() {
             <h1 className="font-headline text-5xl md:text-7xl tracking-wider uppercase">
               About Harshdeep
             </h1>
-            <p className="font-body text-lg leading-relaxed">
+            <p className="font-body text-base md:text-lg leading-relaxed">
               Harshdeep is a multidisciplinary artist with a passion for storytelling through sound and visuals. With a background in classical music and a love for modern electronic production, Harshdeep's work transcends genres, creating immersive experiences that resonate with audiences worldwide.
             </p>
-            <p className="font-body text-lg leading-relaxed">
+            <p className="font-body text-base md:text-lg leading-relaxed">
               From composing film scores to producing genre-bending albums, the journey has been one of constant exploration. This space is a curated collection of projects, a look behind the scenes, and a platform for connection.
             </p>
-            <p className="font-body text-lg leading-relaxed">
+            <p className="font-body text-base md:text-lg leading-relaxed">
               Inspired by the textures of nature and the complexities of human emotion, every piece is a story waiting to be heard.
             </p>
           </div>

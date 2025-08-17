@@ -17,10 +17,10 @@ export default function ConnectPage() {
             <h1 className="font-headline text-5xl md:text-8xl tracking-wider uppercase mb-4">
                 Connect
             </h1>
-            <p className="font-body text-xl md:text-2xl mb-8 max-w-2xl mx-auto">
+            <p className="font-body text-lg md:text-2xl mb-8 max-w-2xl mx-auto">
                 Have a project in mind, a question, or just want to say hello? Get in touch. For professional inquiries, please reach out via email.
             </p>
-            <Button asChild size="lg" className="font-headline text-xl tracking-wider mb-16">
+            <Button asChild size="lg" className="font-headline text-lg md:text-xl tracking-wider mb-16">
                 <a href="mailto:contact@harshdeep.studio">contact@harshdeep.studio</a>
             </Button>
             

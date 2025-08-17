@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import { TooltipProvider, Tooltip, TooltipTrigger, TooltipContent } from '@/components/ui/tooltip';
+import { Popover, PopoverTrigger, PopoverContent } from '@/components/ui/popover';
 
 export default function Home() {
 
@@ -17,26 +18,52 @@ export default function Home() {
             </h1>
             <h2 className="text-xl md:text-3xl font-headline tracking-tight leading-snug md:leading-snug flex flex-wrap items-center justify-center gap-x-2 gap-y-1">
               <span className="opacity-80">i am</span>
-              <Tooltip>
-                <TooltipTrigger className="cursor-default">हर्षदीप</TooltipTrigger>
-                <TooltipContent side="top" className="text-base md:text-lg py-2 px-3">light of happiness.</TooltipContent>
-              </Tooltip>
-              <span className="text-muted-foreground">,</span>
-              <Tooltip>
-                <TooltipTrigger className="cursor-default">हर्षdeep</TooltipTrigger>
-                <TooltipContent side="top" className="text-base md:text-lg py-2 px-3">happiness that runs deep.</TooltipContent>
-              </Tooltip>
-              <span className="text-muted-foreground">,</span>
-              <Tooltip>
-                <TooltipTrigger className="cursor-default">harshदीप</TooltipTrigger>
-                <TooltipContent side="top" className="text-base md:text-lg py-2 px-3">harsh flame that hits hard.</TooltipContent>
-              </Tooltip>
-              <span className="text-muted-foreground">, and</span>
-              <Tooltip>
-                <TooltipTrigger className="cursor-default">harshdeep</TooltipTrigger>
-                <TooltipContent side="top" className="text-base md:text-lg py-2 px-3">harsh to hear, deep to feel.</TooltipContent>
-              </Tooltip>
-              <span className="text-muted-foreground">.</span>
+              {/* desktop tooltips */}
+              <span className="hidden md:inline-flex gap-x-2 items-center flex-wrap">
+                <Tooltip>
+                  <TooltipTrigger className="cursor-default">हर्षदीप</TooltipTrigger>
+                  <TooltipContent side="top" className="text-base md:text-lg py-2 px-3">light of happiness.</TooltipContent>
+                </Tooltip>
+                <span className="text-muted-foreground">,</span>
+                <Tooltip>
+                  <TooltipTrigger className="cursor-default">हर्षdeep</TooltipTrigger>
+                  <TooltipContent side="top" className="text-base md:text-lg py-2 px-3">happiness that runs deep.</TooltipContent>
+                </Tooltip>
+                <span className="text-muted-foreground">,</span>
+                <Tooltip>
+                  <TooltipTrigger className="cursor-default">harshदीप</TooltipTrigger>
+                  <TooltipContent side="top" className="text-base md:text-lg py-2 px-3">harsh flame that hits hard.</TooltipContent>
+                </Tooltip>
+                <span className="text-muted-foreground">, and</span>
+                <Tooltip>
+                  <TooltipTrigger className="cursor-default">harshdeep</TooltipTrigger>
+                  <TooltipContent side="top" className="text-base md:text-lg py-2 px-3">harsh to hear, deep to feel.</TooltipContent>
+                </Tooltip>
+                <span className="text-muted-foreground">.</span>
+              </span>
+              {/* mobile popovers */}
+              <span className="md:hidden inline-flex gap-x-2 items-center flex-wrap">
+                <Popover>
+                  <PopoverTrigger className="cursor-pointer">हर्षदीप</PopoverTrigger>
+                  <PopoverContent side="top" className="text-sm py-2 px-3 w-auto">light of happiness.</PopoverContent>
+                </Popover>
+                <span className="text-muted-foreground">,</span>
+                <Popover>
+                  <PopoverTrigger className="cursor-pointer">हर्षdeep</PopoverTrigger>
+                  <PopoverContent side="top" className="text-sm py-2 px-3 w-auto">happiness that runs deep.</PopoverContent>
+                </Popover>
+                <span className="text-muted-foreground">,</span>
+                <Popover>
+                  <PopoverTrigger className="cursor-pointer">harshदीप</PopoverTrigger>
+                  <PopoverContent side="top" className="text-sm py-2 px-3 w-auto">harsh flame that hits hard.</PopoverContent>
+                </Popover>
+                <span className="text-muted-foreground">, and</span>
+                <Popover>
+                  <PopoverTrigger className="cursor-pointer">harshdeep</PopoverTrigger>
+                  <PopoverContent side="top" className="text-sm py-2 px-3 w-auto">harsh to hear, deep to feel.</PopoverContent>
+                </Popover>
+                <span className="text-muted-foreground">.</span>
+              </span>
             </h2>
             <p className="text-lg md:text-xl font-body tracking-tight text-muted-foreground">
               uk07 • dehradun

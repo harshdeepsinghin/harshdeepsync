@@ -30,10 +30,8 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Configure Pages (enable if needed)
-        uses: actions/configure-pages@v5
-        with:
-          enablement: true
+  # NOTE: If Pages not yet enabled, go to Settings > Pages and set Source to GitHub Actions once.
+  # (configure-pages action removed due to insufficient permissions on repo token)
 
       - name: Cache Next.js build cache
         uses: actions/cache@v4

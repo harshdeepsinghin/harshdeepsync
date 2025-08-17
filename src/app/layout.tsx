@@ -5,8 +5,8 @@ import { Navbar } from '@/components/navbar';
 export const metadata: Metadata = {
   metadataBase: new URL('https://harshdeep.studio'),
   title: {
-    default: 'harshdeep.studio',
-    template: '%s | harshdeep.studio'
+    default: 'harsh&deep',
+    template: '%s | harsh&deep'
   },
   description: 'independent rapper, poet & songwriter crafting original sound from dehradun (uk07).',
   keywords: [
@@ -19,16 +19,16 @@ export const metadata: Metadata = {
     canonical: 'https://harshdeep.studio'
   },
   openGraph: {
-    title: 'harshdeep.studio',
+    title: 'harsh&deep',
     description: 'independent rapper, poet & songwriter crafting original sound from dehradun (uk07).',
     url: 'https://harshdeep.studio',
-    siteName: 'harshdeep.studio',
+  siteName: 'harsh&deep',
     locale: 'en_IN',
     type: 'website'
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'harshdeep.studio',
+    title: 'harsh&deep',
     description: 'independent rapper, poet & songwriter crafting original sound from dehradun (uk07).',
     creator: '@harshdeepsync'
   },

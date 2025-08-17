@@ -12,22 +12,22 @@ export default function ConnectPage() {
 
   return (
     <div className="bg-background text-foreground min-h-[calc(100vh-3.5rem)] flex items-center justify-center">
-      <div className="container mx-auto px-4 py-16 text-center">
-        <div className="max-w-3xl mx-auto">
-            <h1 className="font-headline text-5xl md:text-8xl tracking-wider uppercase mb-4">
-                Connect
-            </h1>
-            <p className="font-body text-lg md:text-2xl mb-8 max-w-2xl mx-auto">
-                Have a project in mind, a question, or just want to say hello? Get in touch. For professional inquiries, please reach out via email.
-            </p>
-            <Button asChild size="lg" className="font-headline text-lg md:text-xl tracking-wider mb-16">
-                <a href="mailto:contact@harshdeep.studio">contact@harshdeep.studio</a>
-            </Button>
-            
-            <h2 className="font-headline text-3xl md:text-4xl tracking-wider mb-8 uppercase">
-                Follow the Journey
-            </h2>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 max-w-xl mx-auto">
+    <div className="container mx-auto px-4 py-16 md:py-24 text-center">
+    <div className="max-w-3xl mx-auto">
+      <h1 className="font-headline text-5xl md:text-8xl tracking-tight leading-[1.1] mb-6">
+        Connect
+      </h1>
+      <p className="font-body text-lg md:text-2xl leading-snug md:leading-normal mb-10 max-w-2xl mx-auto">
+        Have a project in mind, a question, or just want to say hello? Get in touch. For professional inquiries, please reach out via email.
+      </p>
+      <Button asChild size="lg" className="font-headline text-base md:text-lg tracking-tight px-8 md:px-10 mb-20">
+        <a href="mailto:contact@harshdeep.studio">contact@harshdeep.studio</a>
+      </Button>
+
+      <h2 className="font-headline text-3xl md:text-4xl tracking-tight leading-tight mb-10">
+        Follow the Journey
+      </h2>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-10 max-w-xl mx-auto">
               {socialLinks.map((link) => (
                 <Link
                   key={link.name}

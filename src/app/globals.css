@@ -79,8 +79,13 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground leading-snug md:leading-normal;
   }
+  h1, h2, h3, h4, h5, h6 { @apply tracking-tight font-headline; }
+  h1 { @apply leading-[1.15] md:leading-[1.12]; }
+  h2 { @apply leading-snug md:leading-snug; }
+  h3, h4 { @apply leading-snug; }
+  p { @apply leading-snug md:leading-normal; }
   /* Grain texture overlay */
   body::before {
     content: '';

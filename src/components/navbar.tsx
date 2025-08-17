@@ -12,9 +12,9 @@ export function Navbar() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
   const navLinks = [
-    { href: '/', label: 'Home' },
-    { href: '/about', label: 'About' },
-    { href: '/connect', label: 'Connect' },
+    { href: '/', label: 'home' },
+    { href: '/about', label: 'about' },
+    { href: '/connect', label: 'connect' },
   ];
 
   // Close sheet when route changes
@@ -27,7 +27,7 @@ export function Navbar() {
       <div className="container flex h-14 items-center">
         <div className="mr-4 flex md:mr-6">
           <Link href="/" className="flex items-center space-x-2">
-            <span className="font-bold font-headline text-2xl md:text-3xl leading-none">
+            <span className="font-headline text-2xl md:text-3xl leading-none">
               harsh&deep
             </span>
           </Link>
@@ -39,8 +39,10 @@ export function Navbar() {
                 key={link.href}
                 href={link.href}
                 className={cn(
-                  'transition-colors hover:text-foreground/80 font-body',
-                  pathname === link.href ? 'text-foreground' : 'text-foreground/60'
+                  'relative transition-colors font-body pb-1 border-b-2',
+                  pathname === link.href
+                    ? 'text-foreground border-primary'
+                    : 'text-foreground/60 border-transparent hover:text-foreground/80 hover:border-foreground/40'
                 )}
               >
                 {link.label}
@@ -78,8 +80,10 @@ export function Navbar() {
                       key={link.href}
                       href={link.href}
                       className={cn(
-                        'flex w-full items-center py-2 text-lg font-semibold',
-                        pathname === link.href ? 'text-foreground' : 'text-muted-foreground'
+                        'flex w-full items-center py-2 text-lg font-semibold border-b-2',
+                        pathname === link.href
+                          ? 'text-foreground border-primary'
+                          : 'text-muted-foreground border-transparent'
                       )}
                       onClick={() => setOpen(false)}
                     >

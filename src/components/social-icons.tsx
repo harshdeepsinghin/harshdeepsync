@@ -21,9 +21,10 @@ export function TwitterIcon(props: SVGProps<SVGSVGElement>) {
 export function SpotifyIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" {...props}>
-      <path d="M5.9,17.4c-0.3-0.1-0.5,0.2-0.4,0.4C6.5,20,9.2,21,12.2,21c2.8,0,5.4-0.9,7.1-2.8c0.2-0.2,0-0.5-0.2-0.6 C16.4,16.2,10.2,15.7,5.9,17.4z"></path>
-      <path d="M5.3,14c-0.3-0.1-0.5,0.2-0.3,0.4c1.2,2.1,3.5,3.2,6.3,3.2c2.6,0,5-1,6.5-2.9c0.2-0.2,0-0.6-0.3-0.7 C15.1,12.8,10.1,12.5,5.3,14z"></path>
-      <path d="M4.9,10.6c-0.3-0.1-0.5,0.2-0.3,0.5c1.4,2.2,4,3.2,6.9,3.2c2.8,0,5.4-1.1,7.1-3.2c0.2-0.2,0-0.6-0.3-0.7 c-2.9-1-7.1-1.2-10.4,0.1C7.6,10.3,5.2,10.5,4.9,10.6z"></path>
+      <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="1.5" fill="none" />
+      <path d="M7.2 15.9c3.1-1 7.1-.6 9.6.5" strokeWidth="1.4" />
+      <path d="M7 13c2.7-.7 6.3-.4 8.5.6" strokeWidth="1.3" />
+      <path d="M6.8 10.2c2.3-.5 5.5-.3 7.4.5" strokeWidth="1.2" />
     </svg>
   );
 }

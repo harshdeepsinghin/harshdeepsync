@@ -20,9 +20,11 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" />
       </head>
-      <body className="font-body antialiased pt-14">
+      <body className="font-body antialiased">
         <Navbar />
-        {children}
+        <main className="pt-14">
+            {children}
+        </main>
       </body>
     </html>
   );

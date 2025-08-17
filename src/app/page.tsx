@@ -9,6 +9,7 @@ import { useState, useEffect } from 'react';
 
 export default function Home() {
   const [isAndroid, setIsAndroid] = useState(false);
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   useEffect(() => {
     if (typeof navigator !== 'undefined' && /Android/i.test(navigator.userAgent)) {
@@ -84,12 +85,29 @@ export default function Home() {
               )}
               {/* android: stacked lines */}
               {isAndroid && (
-                <span className="md:hidden flex flex-col items-center leading-snug">
-                  <span>हर्षदीप,</span>
-                  <span>हर्षdeep,</span>
-                  <span>harshदीप,</span>
-                  <span>and harshdeep.</span>
-                </span>
+                <div className="md:hidden flex flex-col items-center leading-snug gap-1">
+                  {[
+                    { label: 'हर्षदीप', meaning: 'light of happiness.' },
+                    { label: 'हर्षdeep', meaning: 'happiness that runs deep.' },
+                    { label: 'harshदीप', meaning: 'harsh flame that hits hard.' },
+                    { label: 'harshdeep', meaning: 'harsh to hear, deep to feel.' },
+                  ].map((item, i) => (
+                    <button
+                      key={item.label}
+                      type="button"
+                      onClick={() => setOpenIndex(openIndex === i ? null : i)}
+                      className="text-left px-3 py-1 rounded-md bg-foreground/5 active:bg-foreground/10 focus:outline-none focus:ring-2 focus:ring-foreground/30 font-inherit"
+                    >
+                      <span className="font-semibold">{item.label}</span>
+                      <span className="text-muted-foreground">{i < 3 ? ',' : '.'}</span>
+                      {openIndex === i && (
+                        <span className="block text-xs mt-1 text-muted-foreground/90 font-normal">
+                          {item.meaning}
+                        </span>
+                      )}
+                    </button>
+                  ))}
+                </div>
               )}
             </h2>
             <p className="text-lg md:text-xl font-body tracking-tight text-muted-foreground">

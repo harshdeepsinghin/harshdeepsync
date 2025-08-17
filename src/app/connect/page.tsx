@@ -14,7 +14,7 @@ export default function ConnectPage() {
     <div className="bg-background text-foreground min-h-[calc(100vh-3.5rem)] flex items-center justify-center">
       <div className="container mx-auto px-4 py-16 text-center">
         <div className="max-w-3xl mx-auto">
-            <h1 className="font-headline text-6xl md:text-8xl tracking-wider uppercase mb-4">
+            <h1 className="font-headline text-5xl md:text-8xl tracking-wider uppercase mb-4">
                 Connect
             </h1>
             <p className="font-body text-xl md:text-2xl mb-8 max-w-2xl mx-auto">
@@ -24,7 +24,7 @@ export default function ConnectPage() {
                 <a href="mailto:contact@harshdeep.studio">contact@harshdeep.studio</a>
             </Button>
             
-            <h2 className="font-headline text-4xl tracking-wider mb-8 uppercase">
+            <h2 className="font-headline text-3xl md:text-4xl tracking-wider mb-8 uppercase">
                 Follow the Journey
             </h2>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 max-w-xl mx-auto">

@@ -16,7 +16,7 @@ export default function AboutPage() {
             />
           </div>
           <div className="space-y-6">
-            <h1 className="font-headline text-6xl md:text-7xl tracking-wider uppercase">
+            <h1 className="font-headline text-5xl md:text-7xl tracking-wider uppercase">
               About Harshdeep
             </h1>
             <p className="font-body text-lg leading-relaxed">

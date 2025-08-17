@@ -18,6 +18,9 @@ export default function Home() {
           <p className="text-base md:text-xl max-w-2xl mx-auto font-body animate-fade-in-up">
             Original music dropping soon. Stay tuned.
           </p>
+          <p className="text-sm md:text-base font-body animate-fade-in-up text-muted-foreground" style={{ animationDelay: '0.2s' }}>
+            UK07 | Dehradun
+          </p>
         </div>
 
         <div className="flex flex-col sm:flex-row items-center gap-4 animate-fade-in-up" style={{ animationDelay: '0.5s' }}>

@@ -80,7 +80,7 @@ export default function RootLayout({
       </head>
       <body className="font-body antialiased">
         <Navbar />
-        <main className="pt-14">
+  <main className="pt-14">
             {children}
         </main>
       </body>

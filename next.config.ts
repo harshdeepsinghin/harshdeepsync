@@ -1,9 +1,6 @@
 import type {NextConfig} from 'next';
 
 const nextConfig: NextConfig = {
-  // Enable static HTML export so the site can be deployed on GitHub Pages
-  output: 'export',
-  // Allow build even if type errors or lint errors (can tighten later)
   typescript: {
     ignoreBuildErrors: true,
   },

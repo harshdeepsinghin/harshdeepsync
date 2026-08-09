@@ -3,7 +3,7 @@ import './globals.css';
 import { Navbar } from '@/components/navbar';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://harshdeep.studio'),
+  metadataBase: new URL('https://music.harshdeepsingh.in'),
   title: {
     default: 'harsh&deep',
     template: '%s | harsh&deep'
@@ -12,16 +12,16 @@ export const metadata: Metadata = {
   keywords: [
     'harshdeep', 'harsh&deep', 'harshdeepsync', 'indian rapper', 'dehradun artist', 'uk07', 'lyrics', 'poet', 'songwriter', 'independent music'
   ],
-  authors: [{ name: 'Harshdeep', url: 'https://harshdeep.studio' }],
+  authors: [{ name: 'Harshdeep', url: 'https://music.harshdeepsingh.in' }],
   creator: 'Harshdeep',
   publisher: 'Harshdeep',
   alternates: {
-    canonical: 'https://harshdeep.studio'
+    canonical: 'https://music.harshdeepsingh.in'
   },
   openGraph: {
     title: 'harsh&deep',
     description: 'independent rapper, poet & songwriter crafting original sound from dehradun (uk07).',
-    url: 'https://harshdeep.studio',
+    url: 'https://music.harshdeepsingh.in',
   siteName: 'harsh&deep',
     locale: 'en_IN',
     type: 'website'
@@ -49,10 +49,10 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Libertinus+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
-        <link rel="canonical" href="https://harshdeep.studio" />
+        <link rel="canonical" href="https://music.harshdeepsingh.in" />
         <meta name="robots" content="index,follow" />
         <meta name="author" content="Harshdeep" />
-        <meta name="application-name" content="harshdeep.studio" />
+        <meta name="application-name" content="music.harshdeepsingh.in" />
         <meta name="apple-mobile-web-app-title" content="harshdeep" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -68,7 +68,7 @@ export default function RootLayout({
               name: 'Harshdeep',
               alternateName: ['harsh&deep', 'harshdeepsync'],
               description: 'Independent rapper, poet & songwriter crafting original sound from Dehradun (UK07).',
-              url: 'https://harshdeep.studio',
+              url: 'https://music.harshdeepsingh.in',
               sameAs: [
                 'https://instagram.com/harshdeepsync',
                 'https://youtube.com/@harshdeepsync',

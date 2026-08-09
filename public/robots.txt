@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://harshdeep.studio/sitemap.xml
-Host: harshdeep.studio
+Sitemap: https://music.harshdeepsingh.in/sitemap.xml
+Host: music.harshdeepsingh.in

@@ -163,8 +163,15 @@ export default function Home() {
             <p className="font-body tracking-tight text-muted-foreground text-lg md:text-xl">
               uk07 • dehradun
             </p>
-            <p className="text-muted-foreground md:text-xl max-w-2xl mx-auto font-body leading-snug md:leading-normal">
-              original music dropping soon. stay tuned.
+            <p className="text-muted-foreground md:text-xl max-w-2xl mx-auto font-body leading-snug md:leading-normal lowercase">
+              <a
+                href="https://open.spotify.com/track/43B8JczIxrrl7PNBRyFBNA"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline underline-offset-4 hover:text-foreground transition-colors"
+              >
+                mere baara saal is live now
+              </a>
             </p>
           </div>
           {/* CTAs */}

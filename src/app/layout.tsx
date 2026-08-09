@@ -72,6 +72,7 @@ export default function RootLayout({
               sameAs: [
                 'https://instagram.com/harshdeepsync',
                 'https://youtube.com/@harshdeepsync',
+                'https://open.spotify.com/artist/4NAHMN2nFSkKfqmZdoNvW4',
                 'https://open.spotify.com/user/zgearbiszvaowgdl6yvyx362k'
               ]
             })

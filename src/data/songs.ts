@@ -20,7 +20,7 @@ export const songs: Song[] = [
   {
     slug: 'mere-baara-saal',
     title: 'mere baara saal',
-    releaseDate: '2026-08-08',
+    releaseDate: '2026-08-10',
     spotifyUrl: 'https://open.spotify.com/track/43B8JczIxrrl7PNBRyFBNA',
     links: [
       { platform: 'youtube', url: 'https://youtu.be/oeVGWyzoHvs' },

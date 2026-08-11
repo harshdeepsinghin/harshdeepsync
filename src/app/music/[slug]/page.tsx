@@ -3,26 +3,12 @@ import { notFound } from 'next/navigation';
 import { songs } from '@/data/songs';
 import { PLATFORMS } from '@/data/platforms';
 import { cn } from '@/lib/utils';
+import { getCoverArt } from '@/lib/spotify-cover';
 
 export const dynamicParams = false;
 
 export function generateStaticParams() {
   return songs.map((song) => ({ slug: song.slug }));
-}
-
-async function getCoverArt(spotifyUrl?: string): Promise<string | null> {
-  if (!spotifyUrl) return null;
-  try {
-    const res = await fetch(
-      `https://open.spotify.com/oembed?url=${encodeURIComponent(spotifyUrl)}`,
-      { next: { revalidate: 60 * 60 * 24 } }
-    );
-    if (!res.ok) return null;
-    const data = (await res.json()) as { thumbnail_url?: string };
-    return data.thumbnail_url ?? null;
-  } catch {
-    return null;
-  }
 }
 
 export async function generateMetadata(

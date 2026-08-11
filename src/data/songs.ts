@@ -4,19 +4,23 @@ export interface Song {
   /** URL slug -> music.harshdeepsingh.in/music/<slug> */
   slug: string;
   title: string;
+  /** ISO date (YYYY-MM-DD). Drives sort order on /catalog, latest first. */
+  releaseDate: string;
   /** Spotify track URL, also used to auto-fetch cover art (no API key needed). */
   spotifyUrl?: string;
   /** Platform links, in the order they should appear on the page. */
   links: { platform: PlatformId; url: string }[];
 }
 
-// To add a new song: add an object below with a unique `slug` and its
-// platform links (order = display order). To drop a platform from a song,
-// just remove that entry from its `links` array. No code changes needed.
+// To add a new song: add an object below with a unique `slug`, its release
+// date (controls catalog order, latest first), and its platform links (order
+// = display order on the song page). To drop a platform from a song, just
+// remove that entry from its `links` array. No code changes needed.
 export const songs: Song[] = [
   {
     slug: 'mere-baara-saal',
     title: 'mere baara saal',
+    releaseDate: '2026-08-08',
     spotifyUrl: 'https://open.spotify.com/track/43B8JczIxrrl7PNBRyFBNA',
     links: [
       { platform: 'youtube', url: 'https://youtu.be/oeVGWyzoHvs' },

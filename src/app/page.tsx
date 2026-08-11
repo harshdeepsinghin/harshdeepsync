@@ -164,14 +164,12 @@ export default function Home() {
               uk07 • dehradun
             </p>
             <p className="text-muted-foreground md:text-xl max-w-2xl mx-auto font-body leading-snug md:leading-normal lowercase">
-              <a
-                href="https://open.spotify.com/track/43B8JczIxrrl7PNBRyFBNA"
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                href="/music/mere-baara-saal"
                 className="underline underline-offset-4 hover:text-foreground transition-colors"
               >
                 mere baara saal is live now
-              </a>
+              </Link>
             </p>
           </div>
           {/* CTAs */}

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { songs } from '@/data/songs';
-import { getCoverArt } from '@/lib/spotify-cover';
+import { getCoverArt } from '@/lib/cover-art';
 import { PLATFORMS } from '@/data/platforms';
 import { cn } from '@/lib/utils';
 
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
 export default async function CatalogPage() {
   const sorted = [...songs].sort((a, b) => b.releaseDate.localeCompare(a.releaseDate));
-  const covers = await Promise.all(sorted.map((song) => getCoverArt(song.spotifyUrl)));
+  const covers = await Promise.all(sorted.map((song) => getCoverArt(song)));
 
   return (
     <div className="bg-background text-foreground min-h-[calc(100vh-3.5rem)]">

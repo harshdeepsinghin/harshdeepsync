@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation';
 import { songs } from '@/data/songs';
 import { PLATFORMS } from '@/data/platforms';
 import { cn } from '@/lib/utils';
-import { getCoverArt } from '@/lib/spotify-cover';
+import { getCoverArt } from '@/lib/cover-art';
 
 // Rendered on-demand rather than pre-generated: this deploy's Cloudflare
 // Worker uses a no-op incremental cache, so a build-time-static dynamic
@@ -17,7 +17,7 @@ export async function generateMetadata(
   const song = songs.find((s) => s.slug === slug);
   if (!song) return {};
 
-  const cover = await getCoverArt(song.spotifyUrl);
+  const cover = await getCoverArt(song);
   const description = `listen to "${song.title}" by harsh&deep on spotify, apple music, youtube and more.`;
   const url = `https://music.harshdeepsingh.in/music/${song.slug}`;
 
@@ -50,7 +50,7 @@ export default async function SongPage({
   const song = songs.find((s) => s.slug === slug);
   if (!song) notFound();
 
-  const cover = await getCoverArt(song.spotifyUrl);
+  const cover = await getCoverArt(song);
   const url = `https://music.harshdeepsingh.in/music/${song.slug}`;
 
   return (

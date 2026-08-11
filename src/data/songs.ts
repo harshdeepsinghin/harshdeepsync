@@ -30,4 +30,12 @@ export const songs: Song[] = [
       { platform: 'jiosaavn', url: 'https://www.jiosaavn.com/song/mere-baara-saal/XQ0TdjZHbmA' },
     ],
   },
+  {
+    slug: 'mai-parinda-home-studio-version',
+    title: 'mai parinda (home studio version)',
+    releaseDate: '2025-06-26',
+    links: [
+      { platform: 'youtube', url: 'https://youtu.be/NkRz3b625qI' },
+    ],
+  },
 ];

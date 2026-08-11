@@ -47,3 +47,4 @@ firestore-debug.log
 # cloudflare open-next
 .open-next/
 .dev.vars
+.wrangler/

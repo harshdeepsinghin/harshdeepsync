@@ -5,11 +5,10 @@ import { PLATFORMS } from '@/data/platforms';
 import { cn } from '@/lib/utils';
 import { getCoverArt } from '@/lib/spotify-cover';
 
-export const dynamicParams = false;
-
-export function generateStaticParams() {
-  return songs.map((song) => ({ slug: song.slug }));
-}
+// Rendered on-demand rather than pre-generated: this deploy's Cloudflare
+// Worker uses a no-op incremental cache, so a build-time-static dynamic
+// route ([slug]) would 404 on every request (cache miss + no fallback).
+export const dynamic = 'force-dynamic';
 
 export async function generateMetadata(
   { params }: { params: Promise<{ slug: string }> }

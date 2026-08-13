@@ -174,11 +174,11 @@ export default function Home() {
           </div>
           {/* CTAs */}
           <div className="mt-8 md:mt-10 flex flex-row items-center justify-center gap-4">
-            <Button asChild size="lg" className="font-headline tracking-tight border-2 text-base px-10 h-14">
+            <Button asChild variant="outline" size="lg" className="font-headline tracking-tight border-2 hover:bg-foreground hover:text-background text-base px-10 h-14">
               <Link href="/about">who i am <ArrowRight className="ml-2" /></Link>
             </Button>
-            <Button asChild variant="outline" size="lg" className="font-headline tracking-tight border-2 hover:bg-foreground hover:text-background text-base px-10 h-14">
-              <Link href="/connect">connect <ArrowRight className="ml-2" /></Link>
+            <Button asChild size="lg" className="font-headline tracking-tight border-2 border-primary text-base px-10 h-14">
+              <Link href="/catalog">catalog <ArrowRight className="ml-2" /></Link>
             </Button>
           </div>
         </div>

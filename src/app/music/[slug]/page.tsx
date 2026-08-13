@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { songs } from '@/data/songs';
-import { PLATFORMS } from '@/data/platforms';
+import { PLATFORMS, type PlatformId } from '@/data/platforms';
 import { cn } from '@/lib/utils';
 import { getCoverArt } from '@/lib/cover-art';
 
@@ -43,12 +43,23 @@ export async function generateMetadata(
 
 export default async function SongPage({
   params,
+  searchParams,
 }: {
   params: Promise<{ slug: string }>;
+  searchParams: Promise<{ open?: string }>;
 }) {
   const { slug } = await params;
   const song = songs.find((s) => s.slug === slug);
   if (!song) notFound();
+
+  const { open } = await searchParams;
+  // /go lands here with ?open=<platform> to auto-open the right app for the
+  // visitor's device. Fires as an inline script (before hydration) so it's
+  // effectively instant; every platform link below still renders as a
+  // fallback in case that app/platform isn't what the visitor actually uses.
+  const autoOpenUrl = open
+    ? song.links.find((l) => l.platform === (open as PlatformId))?.url
+    : undefined;
 
   const cover = await getCoverArt(song);
   const url = `https://music.harshdeepsingh.in/music/${song.slug}`;
@@ -69,6 +80,14 @@ export default async function SongPage({
           }),
         }}
       />
+      {autoOpenUrl && (
+        <script
+          // eslint-disable-next-line react/no-danger
+          dangerouslySetInnerHTML={{
+            __html: `window.location.replace(${JSON.stringify(autoOpenUrl)});`,
+          }}
+        />
+      )}
       <div className="w-full max-w-md mx-auto text-center flex flex-col items-center">
         {cover ? (
           // eslint-disable-next-line @next/next/no-img-element

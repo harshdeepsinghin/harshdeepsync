@@ -53,13 +53,21 @@ export default async function SongPage({
   if (!song) notFound();
 
   const { open } = await searchParams;
-  // /go lands here with ?open=<platform> to auto-open the right app for the
-  // visitor's device. Fires as an inline script (before hydration) so it's
-  // effectively instant; every platform link below still renders as a
-  // fallback in case that app/platform isn't what the visitor actually uses.
-  const autoOpenUrl = open
-    ? song.links.find((l) => l.platform === (open as PlatformId))?.url
+  const matchedPlatform = open as PlatformId | undefined;
+  const autoOpenUrl = matchedPlatform
+    ? song.links.find((l) => l.platform === matchedPlatform)?.url
     : undefined;
+
+  // Matched platform (if any) goes first so it's the obvious thing to tap —
+  // this is the real fallback: iOS Safari blocks script-triggered popups
+  // outright, so the auto-open below is best-effort only. A real tap on this
+  // link (already target="_blank") reliably opens the app/new tab and always
+  // leaves this page open behind it.
+  const orderedLinks = matchedPlatform
+    ? [...song.links].sort((a, b) =>
+        a.platform === matchedPlatform ? -1 : b.platform === matchedPlatform ? 1 : 0
+      )
+    : song.links;
 
   const cover = await getCoverArt(song);
   const url = `https://music.harshdeepsingh.in/music/${song.slug}`;
@@ -84,7 +92,7 @@ export default async function SongPage({
         <script
           // eslint-disable-next-line react/no-danger
           dangerouslySetInnerHTML={{
-            __html: `window.location.replace(${JSON.stringify(autoOpenUrl)});`,
+            __html: `try { window.open(${JSON.stringify(autoOpenUrl)}, '_blank', 'noopener'); } catch (e) {}`,
           }}
         />
       )}
@@ -107,15 +115,22 @@ export default async function SongPage({
         <h1 className="font-headline text-3xl md:text-5xl tracking-tight leading-tight mb-2 lowercase">
           {song.title}
         </h1>
-        <p className="font-body text-muted-foreground text-base md:text-lg mb-10 lowercase">
+        <p className="font-body text-muted-foreground text-base md:text-lg mb-2 lowercase">
           harsh&amp;deep
         </p>
+        {autoOpenUrl && (
+          <p className="font-body text-muted-foreground text-xs md:text-sm mb-8 lowercase">
+            opening on {PLATFORMS[matchedPlatform!].label.toLowerCase()} — if it doesn&apos;t, tap it below.
+          </p>
+        )}
+        {!autoOpenUrl && <div className="mb-10" />}
 
         <div className="w-full flex flex-col gap-4">
-          {song.links.map(({ platform, url: link }) => {
+          {orderedLinks.map(({ platform, url: link }) => {
             const config = PLATFORMS[platform];
             if (!config) return null;
             const Icon = config.icon;
+            const isMatched = platform === matchedPlatform;
             return (
               <a
                 key={platform}
@@ -124,7 +139,8 @@ export default async function SongPage({
                 rel="noopener noreferrer"
                 aria-label={`listen on ${config.label}`}
                 className={cn(
-                  'group w-full flex items-center gap-4 border-2 border-foreground rounded-xl px-5 py-4 transition-all duration-300 transform hover:-translate-y-0.5',
+                  'group w-full flex items-center gap-4 border-2 rounded-xl px-5 py-4 transition-all duration-300 transform hover:-translate-y-0.5',
+                  isMatched ? 'border-primary bg-primary/5' : 'border-foreground',
                   config.hoverClass
                 )}
               >

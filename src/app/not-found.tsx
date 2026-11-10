@@ -4,7 +4,7 @@ import { ArrowRight } from 'lucide-react';
 
 export default function NotFound() {
   return (
-    <div className="bg-background text-foreground min-h-[calc(100vh-3.5rem)] flex items-center justify-center px-5 text-center">
+    <div className="bg-background text-foreground min-h-[calc(100dvh-3.5rem)] flex items-center justify-center px-5 text-center">
       <div className="max-w-md mx-auto flex flex-col items-center -mt-8 md:-mt-12">
         <h1 className="font-headline tracking-tight leading-none text-[clamp(4rem,18vw,7rem)] mb-3">
           40<span className="text-primary">4</span>

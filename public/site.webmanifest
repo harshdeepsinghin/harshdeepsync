@@ -3,8 +3,8 @@
   "short_name": "tatv",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#000000",
-  "theme_color": "#000000",
+  "background_color": "#f8f3e7",
+  "theme_color": "#f8f3e7",
   "description": "tatv | musician and songwriter who sings and raps | Dehradun (UK07)",
   "icons": [
     { "src": "/favicon.ico", "sizes": "64x64 32x32 24x24 16x16", "type": "image/x-icon" }

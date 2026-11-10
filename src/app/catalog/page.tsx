@@ -16,7 +16,7 @@ export default async function CatalogPage() {
   const covers = await Promise.all(sorted.map((song) => getCoverArt(song)));
 
   return (
-    <div className="bg-background text-foreground min-h-[calc(100vh-3.5rem)]">
+    <div className="bg-background text-foreground min-h-[calc(100dvh-3.5rem)]">
       <div className="container mx-auto px-4 py-16 md:py-24">
         <div className="max-w-2xl mx-auto">
           <h1 className="font-headline text-4xl md:text-6xl tracking-tight leading-tight mb-3 lowercase text-center">
@@ -63,6 +63,8 @@ export default async function CatalogPage() {
                           alt={`${song.title} cover art`}
                           width={72}
                           height={72}
+                          loading="lazy"
+                          decoding="async"
                           className="w-16 h-16 md:w-[72px] md:h-[72px] rounded-lg border border-foreground/20 object-cover shrink-0"
                         />
                       ) : (
@@ -71,7 +73,7 @@ export default async function CatalogPage() {
                         </div>
                       )}
                       <div className="min-w-0 flex-1 text-left">
-                        <p className="font-headline text-xl md:text-2xl tracking-tight leading-tight lowercase truncate">
+                        <p className="font-headline text-xl md:text-2xl tracking-tight leading-tight lowercase md:truncate">
                           {song.title}
                         </p>
                         <p className="font-body text-muted-foreground text-sm md:text-base lowercase">

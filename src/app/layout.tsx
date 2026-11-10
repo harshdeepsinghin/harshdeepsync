@@ -1,9 +1,18 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import './globals.css';
 import { Navbar } from '@/components/navbar';
 
+// Matches --background (hsl(41 56% 94%)) so Android Chrome / PWA toolbars blend
+// with the paper background instead of showing a white or black strip.
+const THEME_COLOR = '#f8f3e7';
+
+export const viewport: Viewport = {
+  themeColor: THEME_COLOR
+};
+
 export const metadata: Metadata = {
   metadataBase: new URL('https://music.harshdeepsingh.in'),
+  applicationName: 'tatv',
   title: {
     default: 'tatv',
     template: '%s | tatv'
@@ -15,6 +24,15 @@ export const metadata: Metadata = {
   authors: [{ name: 'Harshdeep Singh', url: 'https://music.harshdeepsingh.in' }],
   creator: 'Harshdeep Singh',
   publisher: 'Harshdeep Singh',
+  robots: {
+    index: true,
+    follow: true
+  },
+  appleWebApp: {
+    capable: true,
+    title: 'tatv',
+    statusBarStyle: 'black-translucent'
+  },
   alternates: {
     canonical: 'https://music.harshdeepsingh.in'
   },
@@ -32,9 +50,6 @@ export const metadata: Metadata = {
     description: 'tatv | musician and songwriter who sings and raps | Dehradun (UK07)',
     creator: '@tatvmusic'
   },
-  icons: {
-    icon: '/favicon.ico'
-  },
   category: 'music'
 };
 
@@ -49,15 +64,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Libertinus+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
-        <link rel="canonical" href="https://music.harshdeepsingh.in" />
-        <meta name="robots" content="index,follow" />
-        <meta name="author" content="Harshdeep Singh" />
-        <meta name="application-name" content="tatv" />
-        <meta name="apple-mobile-web-app-title" content="tatv" />
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-  <link rel="icon" href="/favicon.ico" />
-  <link rel="manifest" href="/site.webmanifest" />
+        <link rel="manifest" href="/site.webmanifest" />
         <script
           type="application/ld+json"
           // eslint-disable-next-line react/no-danger

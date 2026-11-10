@@ -73,7 +73,7 @@ export default async function SongPage({
   const url = `https://music.harshdeepsingh.in/music/${song.slug}`;
 
   return (
-    <div className="bg-background text-foreground min-h-[calc(100vh-3.5rem)] flex items-center justify-center px-4 py-16">
+    <div className="bg-background text-foreground min-h-[calc(100dvh-3.5rem)] flex items-center justify-center px-4 py-16">
       <script
         type="application/ld+json"
         // eslint-disable-next-line react/no-danger

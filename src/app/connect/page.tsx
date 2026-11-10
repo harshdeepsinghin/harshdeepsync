@@ -24,7 +24,7 @@ export default function ConnectPage() {
     };
 
   return (
-    <div className="bg-background text-foreground min-h-[calc(100vh-3.5rem)] flex items-center justify-center">
+    <div className="bg-background text-foreground min-h-[calc(100dvh-3.5rem)] flex items-center justify-center">
     <div className="container mx-auto px-4 py-16 md:py-24 text-center">
     <div className="max-w-3xl mx-auto">
       <h1 className="font-headline text-5xl md:text-8xl tracking-tight leading-[1.1] mb-6 lowercase">

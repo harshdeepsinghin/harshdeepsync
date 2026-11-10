@@ -28,8 +28,8 @@ export function Navbar() {
       <div className="container flex h-14 items-center">
         <div className="mr-4 flex md:mr-6">
           <Link href="/" className="flex items-center space-x-2">
-            <span className="font-headline text-2xl md:text-3xl leading-none">
-              harsh&deep
+            <span className="font-headline text-2xl md:text-3xl leading-none lowercase">
+              tatv
             </span>
           </Link>
         </div>
@@ -71,8 +71,8 @@ export function Navbar() {
                 <SheetTitle className="sr-only">Main navigation</SheetTitle>
                 <div className="grid gap-4 py-4">
                 <Link href="/" className="flex items-center space-x-2">
-                    <span className="font-bold font-headline text-2xl leading-none">
-                      harsh&deep
+                    <span className="font-bold font-headline text-2xl leading-none lowercase">
+                      tatv
                     </span>
                 </Link>
                 <nav className="grid gap-2">

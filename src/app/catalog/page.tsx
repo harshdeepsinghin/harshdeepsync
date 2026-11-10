@@ -7,7 +7,7 @@ import { cn } from '@/lib/utils';
 
 export const metadata: Metadata = {
   title: 'catalog',
-  description: 'every harsh&deep release, latest first — tap a song for all the ways to listen.',
+  description: 'every tatv release, latest first — tap a song for all the ways to listen.',
   alternates: { canonical: 'https://music.harshdeepsingh.in/catalog' },
 };
 

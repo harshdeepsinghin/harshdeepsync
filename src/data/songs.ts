@@ -23,6 +23,12 @@ export const PINNED_SONG_SLUG: string | null = null;
 // date (controls catalog order, latest first), and its platform links (order
 // = display order on the song page). To drop a platform from a song, just
 // remove that entry from its `links` array. No code changes needed.
+// TODO(tatv): the tatv artist profile is live
+// (https://open.spotify.com/artist/0JMna4VWG7Pc7XN9XG79n6), but "mere baara saal"
+// may still be credited to the old artist while the distributor finishes the
+// move. Track IDs usually survive an artist re-credit, so these links were left
+// working on purpose — re-check them once the move lands. Cover art is fetched
+// from `spotifyUrl`, so update that too if the track changes.
 export const songs: Song[] = [
   {
     slug: 'mere-baara-saal',

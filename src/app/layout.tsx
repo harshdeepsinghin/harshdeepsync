@@ -5,35 +5,35 @@ import { Navbar } from '@/components/navbar';
 export const metadata: Metadata = {
   metadataBase: new URL('https://music.harshdeepsingh.in'),
   title: {
-    default: 'harsh&deep',
-    template: '%s | harsh&deep'
+    default: 'tatv',
+    template: '%s | tatv'
   },
-  description: 'independent rapper, poet & songwriter crafting original sound from dehradun (uk07).',
+  description: 'tatv | musician and songwriter who sings and raps | Dehradun (UK07)',
   keywords: [
-    'harshdeep', 'harsh&deep', 'harshdeepsync', 'indian rapper', 'dehradun artist', 'uk07', 'lyrics', 'poet', 'songwriter', 'independent music'
+    'tatv', 'tatvmusic', 'harshdeep singh', 'harshdeep', 'indian musician', 'indian rapper', 'dehradun artist', 'uk07', 'hindi', 'urdu', 'lyrics', 'poet', 'songwriter', 'independent music'
   ],
-  authors: [{ name: 'Harshdeep', url: 'https://music.harshdeepsingh.in' }],
-  creator: 'Harshdeep',
-  publisher: 'Harshdeep',
+  authors: [{ name: 'Harshdeep Singh', url: 'https://music.harshdeepsingh.in' }],
+  creator: 'Harshdeep Singh',
+  publisher: 'Harshdeep Singh',
   alternates: {
     canonical: 'https://music.harshdeepsingh.in'
   },
   openGraph: {
-    title: 'harsh&deep',
-    description: 'independent rapper, poet & songwriter crafting original sound from dehradun (uk07).',
+    title: 'tatv',
+    description: 'tatv | musician and songwriter who sings and raps | Dehradun (UK07)',
     url: 'https://music.harshdeepsingh.in',
-  siteName: 'harsh&deep',
+    siteName: 'tatv',
     locale: 'en_IN',
     type: 'website'
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'harsh&deep',
-    description: 'independent rapper, poet & songwriter crafting original sound from dehradun (uk07).',
-    creator: '@harshdeepsync'
+    title: 'tatv',
+    description: 'tatv | musician and songwriter who sings and raps | Dehradun (UK07)',
+    creator: '@tatvmusic'
   },
   icons: {
-    icon: '/favicon.svg'
+    icon: '/favicon.ico'
   },
   category: 'music'
 };
@@ -51,12 +51,12 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Libertinus+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
         <link rel="canonical" href="https://music.harshdeepsingh.in" />
         <meta name="robots" content="index,follow" />
-        <meta name="author" content="Harshdeep" />
-        <meta name="application-name" content="music.harshdeepsingh.in" />
-        <meta name="apple-mobile-web-app-title" content="harshdeep" />
+        <meta name="author" content="Harshdeep Singh" />
+        <meta name="application-name" content="tatv" />
+        <meta name="apple-mobile-web-app-title" content="tatv" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-  <link rel="icon" href="/favicon.svg" />
+  <link rel="icon" href="/favicon.ico" />
   <link rel="manifest" href="/site.webmanifest" />
         <script
           type="application/ld+json"
@@ -64,16 +64,15 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               '@context': 'https://schema.org',
-              '@type': 'Person',
-              name: 'Harshdeep',
-              alternateName: ['harsh&deep', 'harshdeepsync'],
-              description: 'Independent rapper, poet & songwriter crafting original sound from Dehradun (UK07).',
+              '@type': 'MusicGroup',
+              name: 'tatv',
+              alternateName: ['तत्व', 'Harshdeep Singh', 'हर्षदीप'],
+              description: 'tatv is an independent musician and songwriter from Dehradun, Uttarakhand (UK07), who sings and raps in Hindi and Urdu. Rooted in the hills. Poetry, storytelling and nostalgia, with raw emotion in every line.',
               url: 'https://music.harshdeepsingh.in',
               sameAs: [
-                'https://instagram.com/harshdeepsync',
-                'https://youtube.com/@harshdeepsync',
-                'https://open.spotify.com/artist/4NAHMN2nFSkKfqmZdoNvW4',
-                'https://open.spotify.com/user/zgearbiszvaowgdl6yvyx362k'
+                'https://instagram.com/tatvmusic',
+                'https://youtube.com/@tatvmusic',
+                'https://open.spotify.com/artist/0JMna4VWG7Pc7XN9XG79n6'
               ]
             })
           }}

@@ -48,3 +48,6 @@ firestore-debug.log
 .open-next/
 .dev.vars
 .wrangler/
+
+# local notes / prompts
+/docs

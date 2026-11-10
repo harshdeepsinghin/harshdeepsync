@@ -18,7 +18,7 @@ export async function generateMetadata(
   if (!song) return {};
 
   const cover = await getCoverArt(song);
-  const description = `listen to "${song.title}" by harsh&deep on spotify, apple music, youtube and more.`;
+  const description = `listen to "${song.title}" by tatv on spotify, apple music, youtube and more.`;
   const url = `https://music.harshdeepsingh.in/music/${song.slug}`;
 
   return {
@@ -83,7 +83,7 @@ export default async function SongPage({
             '@type': 'MusicRecording',
             name: song.title,
             url,
-            byArtist: { '@type': 'Person', name: 'Harshdeep' },
+            byArtist: { '@type': 'MusicGroup', name: 'tatv' },
             image: cover ?? undefined,
           }),
         }}
@@ -116,7 +116,7 @@ export default async function SongPage({
           {song.title}
         </h1>
         <p className="font-body text-muted-foreground text-base md:text-lg mb-2 lowercase">
-          harsh&amp;deep
+          tatv
         </p>
         {autoOpenUrl && (
           <p className="font-body text-muted-foreground text-xs md:text-sm mb-8 lowercase">

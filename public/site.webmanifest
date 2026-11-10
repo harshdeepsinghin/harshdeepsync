@@ -1,11 +1,11 @@
 {
-  "name": "harsh&deep",
-  "short_name": "harshdeep",
+  "name": "tatv",
+  "short_name": "tatv",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#000000",
   "theme_color": "#000000",
-  "description": "independent rapper, poet & songwriter crafting original sound from dehradun (uk07).",
+  "description": "tatv | musician and songwriter who sings and raps | Dehradun (UK07)",
   "icons": [
     { "src": "/favicon.ico", "sizes": "64x64 32x32 24x24 16x16", "type": "image/x-icon" }
   ]

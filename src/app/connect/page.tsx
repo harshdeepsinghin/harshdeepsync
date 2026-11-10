@@ -1,12 +1,19 @@
+import type { Metadata } from 'next';
 import { Button } from '@/components/ui/button';
 import { SpotifyIcon, InstagramIcon, TwitterIcon, YoutubeIcon } from '@/components/social-icons';
 import Link from 'next/link';
 
+export const metadata: Metadata = {
+    title: 'connect',
+    description: 'reach tatv — music@harshdeepsingh.in. instagram, spotify and youtube.',
+    alternates: { canonical: 'https://music.harshdeepsingh.in/connect' },
+};
+
 export default function ConnectPage() {
     const socialLinks = [
-        { name: 'instagram', href: 'https://instagram.com/harshdeepsync', icon: InstagramIcon },
-        { name: 'spotify', href: 'https://open.spotify.com/artist/4NAHMN2nFSkKfqmZdoNvW4', icon: SpotifyIcon },
-        { name: 'youtube', href: 'https://youtube.com/@harshdeepsync', icon: YoutubeIcon },
+        { name: 'instagram', href: 'https://instagram.com/tatvmusic', icon: InstagramIcon },
+        { name: 'spotify', href: 'https://open.spotify.com/artist/0JMna4VWG7Pc7XN9XG79n6', icon: SpotifyIcon },
+        { name: 'youtube', href: 'https://youtube.com/@tatvmusic', icon: YoutubeIcon },
       ];
 
     const brandStyles: Record<string, string> = {
@@ -42,7 +49,7 @@ export default function ConnectPage() {
                       href={link.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      aria-label={`harshdeep ${link.name}`}
+                      aria-label={`tatv ${link.name}`}
                       className="group"
                     >
                       <div className={`w-28 h-28 md:w-32 md:h-32 border-2 border-foreground rounded-2xl flex items-center justify-center transition-all duration-300 transform group-hover:-translate-y-1 ${Hover}`}>
